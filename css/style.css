@@ -5,6 +5,30 @@
   #btn-nav {
     display: none;
   }
+  .social-media {
+    position: relative;
+  }
+  .social-media small {
+    text-align: center;
+  }
+  .social-media li img {
+    width: 32px;
+  }
+  .social-media img {
+    text-align: center;
+  }
+  .social-media ul {
+    justify-content: space-around;
+  }
+  .newsletter {
+    padding-bottom: 3rem;
+  }
+  .newsletter button {
+    height: 54px !important;
+  }
+  .social-media, .newsletter, .navigation {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 767px) {
   #btn-nav {
@@ -16,7 +40,7 @@
   }
   .info, .questionManage {
     padding: 1.5em 1em;
-    width: 100% !important;
+    max-width: 100% !important;
   }
   .info h1, .info h2, .info p1, .questionManage h1, .questionManage h2, .questionManage p1 {
     text-align: center;
@@ -29,6 +53,21 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .title h6:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-20%);
+    width: 85%;
+    height: calc(100% + 8px);
+    z-index: -1;
+    background-color: hsl(13, 100%, 96%);
+  }
+  .simple-banner h2 {
+    text-align: center !important;
+    max-width: 100% !important;
   }
 }
 * {
@@ -52,11 +91,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /*navbar*/
 #btn-nav {
-  background-color: hsl(12, 88%, 59%);
+  background-color: rgb(242, 95, 58);
   color: hsl(13, 100%, 96%);
   padding: 0.7em 0;
   outline: none;
-  box-shadow: 0px 8px 24px hsl(12, 88%, 59%);
+  box-shadow: 0px 8px 24px rgb(242, 95, 58);
   transition: opacity 0.3s ease;
 }
 #btn-nav:hover {
@@ -75,11 +114,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #btn-banner {
-  background-color: hsl(12, 88%, 59%);
+  background-color: rgb(242, 95, 58);
   color: hsl(13, 100%, 96%);
   padding: 0.7em 0;
   outline: none;
-  box-shadow: 0px 8px 24px hsl(12, 88%, 59%);
+  box-shadow: 0px 8px 24px rgb(242, 95, 58);
   transition: opacity 0.3s ease;
 }
 #btn-banner:hover {
@@ -98,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single-topic-1, .single-topic-2 {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .title {
@@ -108,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 .title h5 {
   position: relative;
   color: hsl(13, 100%, 96%);
-  padding: 0 1.5rem;
+  padding: 0 1.4rem;
   z-index: 2;
 }
 .title h5:before {
@@ -120,27 +159,95 @@ h1, h2, h3, h4, h5, h6 {
   width: 70px;
   height: 40px;
   border-radius: 22px;
-  background-color: hsl(12, 88%, 59%);
+  background-color: rgb(242, 95, 58);
   z-index: -1;
 }
 .title h6 {
   margin-left: 10px;
 }
-.title h6:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateY(-20%);
-  width: 85%;
-  height: calc(100% + 8px);
-  z-index: -1;
-  background-color: hsl(13, 100%, 96%);
-}
 
 .content-topics p1 {
   font-size: 0.9rem;
   line-height: 1.5rem;
+}
+
+.simple-banner {
+  background-color: rgb(242, 95, 58);
+  padding: 6rem 1.2rem;
+}
+.simple-banner h2 {
+  color: hsl(13, 100%, 96%);
+  font-size: 2.2rem;
+  max-width: 40%;
+}
+.simple-banner button {
+  background-color: rgb(242, 95, 58);
+  color: hsl(13, 100%, 96%);
+  padding: 0.7em 0;
+  outline: none;
+  box-shadow: 0px 8px 24px rgb(242, 95, 58);
+  transition: opacity 0.3s ease;
+  background-color: hsl(13, 100%, 96%) !important;
+  color: rgb(242, 95, 58) !important;
+  box-shadow: none !important;
+  font-weight: 700;
+}
+.simple-banner button:hover {
+  opacity: 0.7;
+}
+
+footer {
+  background-color: hsl(233, 12%, 13%);
+}
+footer .social-media ul, footer .social-media ul, footer .navigation ul, footer .navigation ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+footer .social-media small, footer .social-media li, footer .navigation small, footer .navigation li {
+  color: hsl(227, 12%, 61%);
+}
+footer .social-media {
+  width: 25%;
+}
+footer .social-media li {
+  cursor: pointer;
+}
+footer .navigation {
+  width: 50%;
+}
+footer .navigation {
+  padding: 0 2rem;
+}
+footer .navigation li {
+  cursor: pointer;
+}
+footer .navigation li:hover {
+  color: rgb(242, 95, 58);
+}
+footer .newsletter {
+  width: 25%;
+}
+footer .newsletter input::placeholder {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+footer .newsletter input {
+  margin-right: 0.5rem;
+}
+footer .newsletter button {
+  background-color: rgb(242, 95, 58);
+  color: hsl(13, 100%, 96%);
+  padding: 0.7em 0;
+  outline: none;
+  box-shadow: 0px 8px 24px rgb(242, 95, 58);
+  transition: opacity 0.3s ease;
+  box-shadow: none !important;
+}
+footer .newsletter button:hover {
+  opacity: 0.7;
+}
+footer .newsletter button:hover {
+  background-color: rgb(247, 162, 143);
 }
 
 .nav-link {
@@ -150,6 +257,16 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(227, 12%, 61%);
 }
 
+@media screen and (min-width: 768px) {
+  .footer-intern {
+    position: relative;
+  }
+  .footer-intern .social-media small {
+    position: absolute;
+    right: 12px;
+    top: 120px;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
