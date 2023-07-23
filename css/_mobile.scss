@@ -4,8 +4,8 @@
     .social-media {
         position: relative;
         small {text-align: center;}
-        li img {width: 32px}
-        img {text-align: center;}
+        li img {width: 32px;}
+        img {align-self: center;}
         ul{justify-content: space-around;}
     }
     .newsletter {
@@ -53,6 +53,16 @@
         height: calc(100% + 8px);
         z-index: -1;
         background-color: variables.$Very-Pale-Red;
+}
+
+/*carousel*/
+
+.card:not(:first-child) {
+    display: none;
+}
+.card {
+    margin: 0 auto;
+    width: 100% !important;
 }
 
 .simple-banner h2 {

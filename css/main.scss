@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .info {
     max-width: 350px;
-    
+    margin-top: 3rem;
     h1 {
     font-size: 2.25em;
     }
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .mainTopics {
-        max-width: 50%;
+        max-width: 40%;
     }
 
 .single-topic-1, .single-topic-2 {
@@ -107,6 +107,34 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/*slide*/
+
+.cards-wrapper {
+    display: flex;
+    position: relative;
+    gap: 1.5rem;
+    .card {
+        background-color: variables.$Very-Light-Gray;
+        border: none;
+        height: 35vh;
+        h5 {
+            color: variables.$Dark-Blue;
+        }        
+        img {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+    }
+}
+
+#btn-testimonial {
+    @include btn-get();
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .simple-banner {
     background-color: variables.$Bright-Red;
@@ -139,7 +167,15 @@ footer {
     }
     .social-media {
         width: 25%;
-        li {cursor: pointer;}
+        li {
+            cursor: pointer;
+            img:hover {
+                filter: invert(49%) sepia(79%) saturate(2743%) hue-rotate(339deg) brightness(98%) contrast(93%);
+            }
+        }
+        #logo-footer {
+            filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(353deg) brightness(102%) contrast(103%);
+        }
     }
     .navigation {width: 50%}
     .navigation {
@@ -189,8 +225,6 @@ footer {
         }
     }
 }
-
-
 
 .attribution { 
     font-size: 11px; 
