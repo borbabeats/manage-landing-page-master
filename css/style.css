@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 .cards-wrapper .card {
   background-color: hsl(0, 0%, 98%);
   border: none;
-  height: 35vh;
+  height: 40vh;
 }
 .cards-wrapper .card h5 {
   color: hsl(228, 39%, 23%);
